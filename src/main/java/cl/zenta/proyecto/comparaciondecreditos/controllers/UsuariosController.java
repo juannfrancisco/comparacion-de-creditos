@@ -1,6 +1,7 @@
 package cl.zenta.proyecto.comparaciondecreditos.controllers;
 
 
+import cl.zenta.proyecto.comparaciondecreditos.bd.UsuariosDB;
 import cl.zenta.proyecto.comparaciondecreditos.model.Usuario;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,12 +22,16 @@ public class UsuariosController {
 
         // Ir a la base de datos y obtener usuarios
 
-        List<Usuario> usuarios = new ArrayList<>();
+        //List<Usuario> usuarios = new ArrayList<>();
 
-        usuarios.add( new Usuario(1, "Juan", "123") );
-        usuarios.add( new Usuario(2, "Carlos", "123") );
+        //usuarios.add( new Usuario(1, "Juan", "123") );
+        //usuarios.add( new Usuario(2, "Carlos", "123") );
 
-        return usuarios;
+        UsuariosDB usuariosDB = new UsuariosDB();
+
+
+
+        return usuariosDB.obtenerTodosLosUsuarios();
     }
 
 
