@@ -43,7 +43,7 @@ public class UsuariosController {
     public Usuario buscarUsuario( @PathVariable int id ){
 
         System.out.println( "ID: " + id );
-        // Ir a bniscar el usaurio a la base de datos ...
+        // Ir a buscar el usuario a la base de datos ...
         return new Usuario( id, "Juan", "123" );
     }
 
